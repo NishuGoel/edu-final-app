@@ -9,6 +9,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
   declarations: [ProductListComponent, ProductCardComponent],
   imports: [
     CommonModule
-  ]
+  ],
+  exports: [ProductListComponent, ProductCardComponent]
 })
 export class ProductModule { }

@@ -7,6 +7,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { ProductModule } from './product/product.module';
+import { CartModule } from './cart/cart.module';
 
 @NgModule({
   declarations: [
