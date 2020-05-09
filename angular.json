@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "edu-final-app"
+    }
+  },
+  "defaultProject": "edu-final-app",
+  "cli": {
+    "analytics": "f7ab2140-9d12-47fc-ba6d-c3b3715164a9"
+  }
 }
