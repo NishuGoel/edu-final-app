@@ -17,7 +17,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [],
   bootstrap: [AppComponent]
