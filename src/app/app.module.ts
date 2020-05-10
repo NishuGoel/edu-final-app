@@ -7,8 +7,8 @@ import { ProfileComponent } from './profile/profile.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { HttpClientModule } from '@angular/common/http';
 import { ProductModule } from './product/product.module';
-import { CartModule } from './cart/cart.module';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { CartModule } from './cart/cart.module';
     ErrorPageComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule, HttpClientModule, ProductModule,
     RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [],

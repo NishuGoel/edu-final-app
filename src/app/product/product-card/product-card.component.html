@@ -1,1 +1,6 @@
-<p>product-card works!</p>
+<div class="prod-card" >
+    <div style="font-size: 18px; text-align: center;">Product {{productData.id}}</div>
+    <div style="text-align: center;"><img style="width: 30%; height: 30%;" src="{{productData.url}}"  ></div>
+    <div style="text-align: center; margin-top: 10px;"><button (click)="buy(productData.id)">Buy Now</button></div>
+    <!-- <div>Product {{productData.albumId}}</div> -->
+</div>

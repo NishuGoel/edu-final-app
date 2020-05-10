@@ -1,1 +1,5 @@
-<p>product-list works!</p>
+<div style="text-align: center;"><h2>Search for products</h2></div>
+
+<div style="display: flex; flex-wrap: wrap;">
+   <div style="flex-basis: 30%; " *ngFor="let one of products"> <app-product-card [productData]="one"></app-product-card></div>
+</div>

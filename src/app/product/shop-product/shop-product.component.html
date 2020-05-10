@@ -1,0 +1,12 @@
+<div style="text-align: center;">
+    <h2> Product {{id}}</h2>
+
+    <div><img src="{{productData?.url}}"></div>
+    <div style="margin-top: 20px;"><button class="btn btn-success" *ngIf="!added" (click)="add()">Add to Cart</button>
+        <button disabled class="btn btn-default" *ngIf="added" (click)="add()">Added</button>
+        <button style="margin-left: 10px;" class="btn btn-primary" (click)="explore()">Explore more products</button>
+    </div>
+    
+    
+
+</div> 
