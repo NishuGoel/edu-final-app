@@ -11,6 +11,7 @@ export const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'products', component: ProductListComponent},
   {path: 'shop-product/:id', component: ShopProductComponent},
+  {path: 'spinner', component: SpinnerComponent},
   {path: 'checkout', component: CartComponent},
   {path: '', redirectTo: '/home', pathMatch: 'full'},
   {path: '**', component: ErrorPageComponent}

@@ -9,16 +9,19 @@ import { RouterModule } from '@angular/router';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductModule } from './product/product.module';
+import { CartModule } from './cart/cart.module';
+import { SpinnerComponent } from './shared/spinner/spinner.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ProfileComponent,
     HomeComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    SpinnerComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, ProductModule,
+    BrowserModule, HttpClientModule, ProductModule,CartModule, 
     RouterModule.forRoot(routes, {useHash: true})
   ],
   providers: [],
