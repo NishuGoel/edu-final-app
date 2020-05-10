@@ -24,7 +24,6 @@ export class ProductService {
 
   setCounter(){
     this._tokenProviderSubject.next(++this.counter);
-    // return this.counter++;
    }
    getCounter(){
      return this.counter;
