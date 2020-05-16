@@ -1,5 +1,9 @@
-<div style="float: right;"><img style="width: 15%; height: 15%;" src="../../assets/cart.png"> <span style="font-size: 25px;">
-    {{counter}}
-</span></div>
+<section *ngIf="fadedFullScreenLoaderFlag">
+    <app-spinner></app-spinner>
+</section>
 
+<div style="float: right; cursor: pointer;" (click)="checkout()"><img style="width: 15%; height: 15%;" src="../../assets/cart.png"> <span
+            style="font-size: 25px;">
+            {{counter}}
+        </span></div>
 <router-outlet></router-outlet>

@@ -11,6 +11,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { ProductModule } from './product/product.module';
 import { CartModule } from './cart/cart.module';
 import { SpinnerComponent } from './shared/spinner/spinner.component';
+import { DataService } from './data.service';
+import { ExtendDataService } from './extend-data.service';
+import { LoggerService } from './logger.service';
+import { logServiceFactory } from './log-service.factory';
 
 @NgModule({
   declarations: [
@@ -18,13 +22,34 @@ import { SpinnerComponent } from './shared/spinner/spinner.component';
     ProfileComponent,
     HomeComponent,
     ErrorPageComponent,
-    SpinnerComponent
+    SpinnerComponent,
   ],
   imports: [
-    BrowserModule, HttpClientModule, ProductModule,CartModule, 
-    RouterModule.forRoot(routes, {useHash: true})
+    BrowserModule,
+    HttpClientModule,
+    ProductModule,
+    CartModule,
+    RouterModule.forRoot(routes, { useHash: true }),
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    DataService,
+    // OR {provide: DataService, useClass: DataService} more verbose way of writing the above
+    { provide: DataService, useClass: ExtendDataService },
+    ExtendDataService,
+    { provide: DataService, useClass: ExtendDataService },
+    {
+      provide: DataService,
+      useValue: {
+        sendData: (data) => console.log(data),
+        error: (error) => console.log(error),
+      },
+    },
+    {
+      provide: LoggerService,
+      useFactory: logServiceFactory,
+      deps: [DataService],
+    },
+  ],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
