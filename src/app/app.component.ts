@@ -17,8 +17,7 @@ export class AppComponent implements OnInit {
   constructor(
     private _prodService: ProductService,
     private _fadedFullScreenLoaderService: FadedFullScreenLoaderService,
-    private _router: Router,
-    private dataService: DataService
+    private _router: Router
   ) {}
 
   ngOnInit() {

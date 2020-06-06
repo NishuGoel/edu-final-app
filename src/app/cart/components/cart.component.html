@@ -1,10 +1,24 @@
 <div style="text-align: center; margin-top: 2%;">
-    <div style="display: flex;" *ngFor="let prod of products">
-        <div class="prod-card">
-            <div style="font-size: 18px; text-align: center;">Product {{prod?.id}}</div>
-            <div style="text-align: center;"><img style="width: 30%; height: 30%;" src="{{prod?.url}}"></div>
-        </div>
+  <div style="display: flex;" *ngFor="let prod of products">
+    <div class="prod-card">
+      <div style="font-size: 18px; text-align: center;">
+        Product {{ prod?.id }}
+      </div>
+      <div style="text-align: center;">
+        <img style="width: 30%; height: 30%;" src="{{ prod?.url }}" />
+      </div>
     </div>
-    <button class="btn btn-primary" (click)="complete()">Complete Order! </button>
-    <span style="margin-left: 20px; color: maroon;" *ngIf="ordered">Order Completed!!!</span>
+  </div>
+  <button class="btn btn-primary" (click)="complete()">Complete Order!</button>
+  <button
+    style="margin-left: 10px;"
+    class="btn btn-primary"
+    (click)="explore()"
+  >
+    Explore more products
+  </button>
+
+  <span style="margin-left: 20px; color: maroon;" *ngIf="ordered"
+    >Order Completed!!!</span
+  >
 </div>

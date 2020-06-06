@@ -1,5 +1,5 @@
-import { DataService } from './data.service';
-import { LoggerService } from './logger.service';
+import { DataService } from '../app/data.service';
+import { LoggerService } from '../app/logger.service';
 
 export function logServiceFactory(dataService: DataService) {
   let loggerService: LoggerService = new LoggerService();
