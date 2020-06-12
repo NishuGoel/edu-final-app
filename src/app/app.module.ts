@@ -39,10 +39,10 @@ import { logServiceFactory } from './log-service.factory';
     { provide: DataService, useClass: ExtendDataService },
     {
       provide: DataService,
-      useValue: {
-        sendData: (data) => console.log(data),
-        error: (error) => console.log(error),
-      },
+      // useValue: {
+      //   sendData: (data) => console.log(data),
+      //   error: (error) => console.log(error),
+      // },
     },
     {
       provide: LoggerService,
